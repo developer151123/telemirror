@@ -88,4 +88,4 @@ venv/
 **/*.swp
 
 # Telemirror configs folder
-.configs
+#.configs
