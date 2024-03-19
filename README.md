@@ -18,6 +18,10 @@
 Запустить Docker Image
 >  docker run  --name telemirror  dev/telemirror:1.0
 
+Перезапустить логин и настройку
+>  docker exec -it telemirror /app/setup.sh 
+
+
 ## Создание собственного ретраслятора
 **Из соображений безопасности необходимо создать собственный ретранлятор в телеграме!**
 
