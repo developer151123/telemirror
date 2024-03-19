@@ -47,11 +47,6 @@ def main():
                 step = goto("input")
             else:
                 step = goto("session")
-                env_file_path = Path(cwd + "/.env")
-                env_file_path.touch(mode=0o600, exist_ok=True)
-                set_key(dotenv_path=env_file_path, key_to_set="API_ID", value_to_set=api_id,quote_mode="never")
-                set_key(dotenv_path=env_file_path, key_to_set="API_HASH", value_to_set=api_hash,quote_mode="never")
-                break
 
         if step == 2:
             with TelegramClient(StringSession(), int(api_id), api_hash) as client:
